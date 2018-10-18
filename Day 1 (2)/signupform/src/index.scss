@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.signup_form {
+	width:25%;
+	margin: 50px auto;
+
+	h1 {
+	text-align:center;
+	color:blue;
+	}
+
+	.form_input {
+	display:block;
+	margin-top:1.5rem;
+	padding:10px;
+	width:100%;
+	box-sizing: border-box;
+	}
+
+	.btn {
+		background-color:blue;
+		padding:10px;
+		width:100%;
+		color:white;
+		border-radius:10px;
+		margin-top:20px;
+	}
+
+	.login {
+		text-align:center;
+		color:blue;
+	}
+}
+.login_form {
+	width:25%;
+	margin: 50px auto;
+
+	h1 {
+		text-align:center;
+		color:blue;
+		font-size:1.5rem;
+	}
+
+	.form_input {
+		display:block;
+	margin-top:1.5rem;
+	padding:10px;
+	width:100%;
+	box-sizing: border-box;
+	}
+
+	.btn {
+		display:block;
+		background-color:blue;
+		padding:10px;
+		width:100%;
+		color:white;
+		border-radius:10px;
+		margin-top:20px;
+	}
+
+	.checkbox {
+		width:50%;
+		margin:20px auto;
+	}
+
+	.login {
+		text-align:center;
+		color:blue;
+	}
+}
