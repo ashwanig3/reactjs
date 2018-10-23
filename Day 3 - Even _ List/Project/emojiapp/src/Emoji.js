@@ -12,4 +12,5 @@ class Emoji extends Component {
 	}
 }
 
+
 export default Emoji;
