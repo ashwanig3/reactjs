@@ -5,7 +5,7 @@ export default class Header extends Component {
 		return(
 				<header>
 					<div className="heading">
-						<i class="fab fa-github git"></i>
+						<i className="fab fa-github git"></i>
 						<h1 className="hero-header">Github User Search</h1>
 					</div>
 
