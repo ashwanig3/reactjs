@@ -12,6 +12,7 @@ function TodoForm(props) {
     e.preventDefault();
     if (!value) return;
     props.addTodo(value);
+    document.querySelector("input").value = "";
   };
 
   return (
