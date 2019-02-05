@@ -1,41 +1,59 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-function TodoForm() {
+function TodoForm(props) {
   const [value, setValue] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const newVal = e.target.value;
-    setValue(newVal)
-  }
+    setValue(newVal);
+  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    if(!value) return;            
-  }
+    if (!value) return;
+    props.addTodo(value);
+  };
 
-  return(
+  return (
     <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Add todo" onChange={handleChange} />
-        <button>Add</button>
+      <input type="text" placeholder="Add todo" onChange={handleChange} />
+      <button>Add</button>
     </form>
-  )
+  );
 }
 
 function App() {
-  const [todos, setTodos ] = useState(["ashwani", "praveen", "komal", "madhusudan"]);
+  const [todos, setTodos] = useState([
+    "ashwani",
+    "praveen",
+    "komal",
+    "madhusudan"
+  ]);
 
-  const addTodo = (val) => {
-    const newTodo = [...todos, val]
-    setTodos(newTodo)
-    console.log(todos, "called")
-  }
+  const addTodo = val => {
+    const newTodo = [...todos, val];
+    setTodos(newTodo);
+  };
 
-  return(
-    <div>
-      <TodoForm addTodo={addTodo}/>
+  const handleDelete = id => {
+    todos.splice(id, 1);
+    setTodos([...todos]);
+  };
+
+  return (
+    <div className="container">
+      <TodoForm addTodo={addTodo} />
+      <ol>
+        {todos &&
+          todos.map((todo, i) => (
+            <li key={i}>
+              <span>{todo}</span>
+              <button onClick={() => handleDelete(i)}>delete</button>
+            </li>
+          ))}
+      </ol>
     </div>
   );
 }
 
 export default App;
-
